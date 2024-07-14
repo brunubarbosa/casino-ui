@@ -1,16 +1,10 @@
-import { css } from "../../styled-system/css";
-
+import { styled } from "../../styled-system/jsx";
 export default function Home() {
   return (
-    <div
-      className={css({
-        fontSize: "2xl",
-        fontWeight: "bold",
-        color: "low-contrast",
-        fontFamily: "agletSans",
-      })}
-    >
-      Hello fk world
-    </div>
+    <styled.div>
+      <styled.span textStyle="sm" fontWeight="normal" color="white">
+        Hello fk world
+      </styled.span>
+    </styled.div>
   );
 }
