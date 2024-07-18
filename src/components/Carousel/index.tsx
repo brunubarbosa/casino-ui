@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Image from "next/image";
 import { Icon, IconType } from "../Icon";
 import { arrowWrapper, header, hstack, titleWrapper } from "./style";
+import { Button } from "../Button";
 
 interface CarouselProps {
   items: ReactNode;
@@ -22,8 +23,18 @@ export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
           <span>{subTitle}</span>
         </div>
         <div className={arrowWrapper}>
-          <Icon width={8} name="arrow-left" />
-          <Icon width={8} name="arrow-right" />
+          <Button
+            onClick={() => {}}
+            variant="icon"
+            size="sm"
+            icon="arrow-left"
+          />
+          <Button
+            onClick={() => {}}
+            variant="icon"
+            size="sm"
+            icon="arrow-right"
+          />
         </div>
       </div>
       <ul className={hstack()}>{items}</ul>

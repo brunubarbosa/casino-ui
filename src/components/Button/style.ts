@@ -31,6 +31,15 @@ export const buttonWrapper = cva({
           color: 'primary',
           transition: 'color .3s',
         }
+      },
+      icon: {
+        _hover: {
+          opacity: '0.7'
+        }
+      },
+      outline: {
+        border: '1px',
+        padding: '2'
       }
     },
     size: {

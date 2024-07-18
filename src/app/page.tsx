@@ -77,15 +77,20 @@ export default function Home() {
           </>
         }
       ></Carousel>
-      <Button variant="text">Register</Button>
-      <Button variant="primary" size="sm">
+      <Button onClick={() => {}} variant="text">
         Register
       </Button>
-      <Button variant="primary" size="md">
+      <Button onClick={() => {}} variant="primary" size="sm">
         Register
       </Button>
-      <Button variant="primary" size="lg">
+      <Button onClick={() => {}} variant="primary" size="md">
+        Register
+      </Button>
+      <Button onClick={() => {}} variant="primary" size="lg">
         Join Discord's largest community of players now!
+      </Button>
+      <Button onClick={() => {}} variant="outline" size="md">
+        <Icon name="american-football" width={30} height={30} />
       </Button>
     </styled.div>
   );
