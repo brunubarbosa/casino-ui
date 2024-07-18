@@ -17,9 +17,16 @@ export default defineConfig({
     extend: {
       linearGradient: {
         className: 'bg_gradient',
-        shorthand: 'gradient',
+        shorthand: 'linearGradient',
         transform: value => ({
           backgroundImage: `linear-gradient(${value})`
+        })
+      },
+      radialGradient: {
+        className: 'bg_gradient',
+        shorthand: 'linearGradient',
+        transform: value => ({
+          backgroundImage: `radial-gradient(${value})`
         })
       }
     }
@@ -27,10 +34,14 @@ export default defineConfig({
   theme: {
     extend: {
       tokens: {
+        spacing: {
+          '2xs': {value: '.75rem'}
+        },
         // Figma values
         colors: {
           "white": { value: '#FFFFFF'},
           "primary": { value: '#E90083'},
+          "secondary": {value: '#ff6864'},
           "elevation-1": { value: '#170D19'},
           "elevation-2": { value: '#251929' },
           "elevation-3": { value: '#35243D' },
@@ -38,7 +49,9 @@ export default defineConfig({
           "error": { value: '#DE3449' },
           "success": { value: '#24D861' },
         },
+        
         fontSizes: {
+          xm: {value: '.75rem'},
           sm: {value: '.875rem'},
           md: {value: '1rem'},
           lg: {value: '1.125rem'},
@@ -68,7 +81,7 @@ export default defineConfig({
           "neutral-200": {value: '{colors.elevation-2}'},
           "neutral-300": {value: '{colors.elevation-3}'},
           "border": {value: '{colors.elevation-3}'},
-        }
+        },
       },
       textStyles
     },

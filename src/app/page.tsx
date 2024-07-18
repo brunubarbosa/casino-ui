@@ -4,6 +4,7 @@ import { Icon } from "../components/Icon";
 import { Card, FinancialCard, CategoryCard } from "../components/Card";
 import { ImageCard } from "../components/Card/ImageCard";
 import Image from "next/image";
+import { Button } from "../components/Button";
 
 export default function Home() {
   return (
@@ -17,17 +18,14 @@ export default function Home() {
             <CategoryCard
               icon={<i className="icon-ping-pong" />}
               name="TÊNIS DE MESA"
-              isActive={false}
             />
             <CategoryCard
               icon={<i className="icon-ping-pong" />}
               name="TÊNIS DE MESA"
-              isActive={false}
             />
             <CategoryCard
               icon={<i className="icon-ping-pong" />}
               name="TÊNIS DE MESA"
-              isActive={false}
             />
           </>
         }
@@ -79,6 +77,16 @@ export default function Home() {
           </>
         }
       ></Carousel>
+      <Button variant="text">Register</Button>
+      <Button variant="primary" size="sm">
+        Register
+      </Button>
+      <Button variant="primary" size="md">
+        Register
+      </Button>
+      <Button variant="primary" size="lg">
+        Join Discord's largest community of players now!
+      </Button>
     </styled.div>
   );
 }
