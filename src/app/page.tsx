@@ -1,3 +1,5 @@
+"use client";
+
 import { styled } from "../../styled-system/jsx";
 import { Carousel } from "../components/Carousel";
 import { Icon } from "../components/Icon";
@@ -8,74 +10,72 @@ import { Button } from "../components/Button";
 
 export default function Home() {
   return (
-    <styled.div>
+    <div>
       <Carousel
         title="esportes"
         icon="spades"
         subTitle={`TOTAL 24H VOLUME`}
-        items={
-          <>
-            <CategoryCard
-              icon={<i className="icon-ping-pong" />}
-              name="TÊNIS DE MESA"
-            />
-            <CategoryCard
-              icon={<i className="icon-ping-pong" />}
-              name="TÊNIS DE MESA"
-            />
-            <CategoryCard
-              icon={<i className="icon-ping-pong" />}
-              name="TÊNIS DE MESA"
-            />
-          </>
-        }
+        items={[
+          <CategoryCard
+            icon={<i className="icon-ping-pong" />}
+            name="TÊNIS DE MESA"
+          />,
+          <CategoryCard
+            icon={<i className="icon-ping-pong" />}
+            name="TÊNIS DE MESA"
+          />,
+          <CategoryCard
+            icon={<i className="icon-ping-pong" />}
+            name="TÊNIS DE MESA"
+          />,
+        ]}
       ></Carousel>
       <Carousel
         title="esportes"
         icon="spades"
         subTitle={`TOTAL 24H VOLUME`}
-        items={
-          <>
-            <FinancialCard
-              type="stock"
-              name="BTC"
-              price="150.25"
-              volume="120"
-              leverage="100"
-              percentageChange={-1.56}
-            />
-            <FinancialCard
-              type="stock"
-              name="BTC"
-              price="150.25"
-              volume="120"
-              leverage="100"
-              percentageChange={-1.56}
-            />
-            <FinancialCard
-              type="stock"
-              name="BTC"
-              price="150.25"
-              volume="120"
-              leverage="100"
-              percentageChange={-1.56}
-            />
-          </>
-        }
+        items={[
+          <FinancialCard
+            type="stock"
+            name="BTC"
+            price="150.25"
+            volume="120"
+            leverage="100"
+            percentageChange={-1.56}
+          />,
+          <FinancialCard
+            type="stock"
+            name="BTC"
+            price="150.25"
+            volume="120"
+            leverage="100"
+            percentageChange={-1.56}
+          />,
+          <FinancialCard
+            type="stock"
+            name="BTC"
+            price="150.25"
+            volume="120"
+            leverage="100"
+            percentageChange={-1.56}
+          />,
+        ]}
       ></Carousel>
       <Carousel
         title="esportes"
         icon="spades"
         subTitle={`TOTAL 24H VOLUME`}
-        items={
-          <>
-            <ImageCard />
-            <ImageCard />
-            <ImageCard />
-            <ImageCard />
-            <ImageCard />
-          </>
-        }
+        items={[
+          <ImageCard />,
+          <ImageCard />,
+          <ImageCard />,
+          <ImageCard />,
+          <ImageCard />,
+          <ImageCard />,
+          <ImageCard />,
+          <ImageCard />,
+          <ImageCard />,
+        ]}
       ></Carousel>
       <Button onClick={() => {}} variant="text">
         Register
@@ -92,6 +92,6 @@ export default function Home() {
       <Button onClick={() => {}} variant="outline" size="md">
         <Icon name="american-football" width={30} height={30} />
       </Button>
-    </styled.div>
+    </div>
   );
 }

@@ -1,6 +1,8 @@
 import { css } from '@/styled-system/css'
+export { css } from '@/styled-system/css'
 export { hstack } from '@/styled-system/patterns'
 
+export const wrapper = css({ maxWidth: "full" })
 export const header = css({
   display: 'flex',
   flexDirection: 'row',
@@ -16,6 +18,11 @@ export const titleWrapper = css({
   gap: '10px',
   textTransform: "uppercase",
   fontWeight: "bold",
+})
+
+export const subTitleWrapper = css({
+  md: { display: "inline" },
+  base: { display: "none" },
 })
 
 export const arrowWrapper = css({

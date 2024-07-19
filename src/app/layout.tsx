@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AgletSans } from "../styles/font";
 import Head from "next/head";
+import { Container } from "@/styled-system/jsx";
+import { css } from "@/styled-system/css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${AgletSans.variable}`}>
-      <Head>
+      {/* <Head>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <body className={inter.className}>{children}</body>
+      </Head> */}
+      <body className={inter.className}>
+        <div
+          className={css({
+            display: "flex",
+            minHeight: "100vh",
+          })}
+        >
+          <div className={css({ width: "full" })}>{children}</div>
+        </div>
+      </body>
     </html>
   );
 }

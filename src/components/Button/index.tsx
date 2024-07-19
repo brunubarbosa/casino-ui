@@ -1,6 +1,9 @@
+"use client";
+
 import React, { ReactNode } from "react";
 import { buttonWrapper } from "./style";
 import { Icon, IconType } from "../Icon";
+import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
 
 interface ButtonProps {
   variant?: "primary" | "text" | "icon" | "outline";
@@ -10,9 +13,17 @@ interface ButtonProps {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const Button = ({ variant, size, children, icon }: ButtonProps) => {
+export const Button = ({
+  variant,
+  size,
+  children,
+  icon,
+  onClick,
+}: ButtonProps) => {
+  const swiper = useSwiper();
   return (
     <button
+      onClick={onClick}
       className={buttonWrapper({
         visual: variant,
         size: size,

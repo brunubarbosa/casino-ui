@@ -11,7 +11,7 @@ export const textStyles = defineTextStyles({
 })
 export default defineConfig({
   preflight: true,
-  include: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
+  include: ["./src/components/**/*.{ts,tsx,js,jsx}", "./src/app/**/*.{ts,tsx,js,jsx}"],
   exclude: [],
   utilities: {
     extend: {
