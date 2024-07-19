@@ -16,25 +16,6 @@ export default function Home() {
         icon="spades"
         subTitle={`TOTAL 24H VOLUME`}
         items={[
-          <CategoryCard
-            icon={<i className="icon-ping-pong" />}
-            name="TÊNIS DE MESA"
-          />,
-          <CategoryCard
-            icon={<i className="icon-ping-pong" />}
-            name="TÊNIS DE MESA"
-          />,
-          <CategoryCard
-            icon={<i className="icon-ping-pong" />}
-            name="TÊNIS DE MESA"
-          />,
-        ]}
-      ></Carousel>
-      <Carousel
-        title="esportes"
-        icon="spades"
-        subTitle={`TOTAL 24H VOLUME`}
-        items={[
           <FinancialCard
             type="stock"
             name="BTC"

@@ -22,13 +22,6 @@ export default defineConfig({
           backgroundImage: `linear-gradient(${value})`
         })
       },
-      radialGradient: {
-        className: 'bg_gradient',
-        shorthand: 'linearGradient',
-        transform: value => ({
-          backgroundImage: `radial-gradient(${value})`
-        })
-      }
     }
   },
   theme: {

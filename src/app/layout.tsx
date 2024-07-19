@@ -4,7 +4,9 @@ import "./globals.css";
 import { AgletSans } from "../styles/font";
 import Head from "next/head";
 import { Container } from "@/styled-system/jsx";
-import { css } from "@/styled-system/css";
+import { css, cx } from "@/styled-system/css";
+import { container } from "@/styled-system/patterns";
+import { Footer } from "../components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,14 +26,17 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
       <body className={inter.className}>
-        <div
+        <main
           className={css({
             display: "flex",
             minHeight: "100vh",
           })}
         >
-          <div className={css({ width: "full" })}>{children}</div>
-        </div>
+          <div className={cx(container(), css({ width: "full" }))}>
+            {children}
+          </div>
+        </main>
+        <Footer />
       </body>
     </html>
   );

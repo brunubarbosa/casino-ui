@@ -3,8 +3,10 @@ export {hstack, stack} from '@/styled-system/patterns'
 
 
 export const imageCardWrapper = css({
-  rounded: "xl",
   overflow: "hidden",
+  '& img': {
+    rounded: "xl",
+  }
 })
 export const categoryCardWrapper = css({
   fontWeight: "bolder",

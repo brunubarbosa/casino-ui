@@ -3,9 +3,9 @@
 import React, { ReactNode } from "react";
 import { buttonWrapper } from "./style";
 import { Icon, IconType } from "../Icon";
-import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
 
 interface ButtonProps {
+  disabled?: boolean;
   variant?: "primary" | "text" | "icon" | "outline";
   size?: "sm" | "md" | "lg";
   children?: string | ReactNode;
@@ -19,8 +19,8 @@ export const Button = ({
   children,
   icon,
   onClick,
+  disabled,
 }: ButtonProps) => {
-  const swiper = useSwiper();
   return (
     <button
       onClick={onClick}
@@ -29,6 +29,7 @@ export const Button = ({
         size: size,
         shape: "rounded",
       })}
+      disabled={!!disabled}
     >
       {icon ? <Icon name={icon} width={8} height={15} /> : null}
       {children}

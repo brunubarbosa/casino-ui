@@ -11,9 +11,10 @@ import {
   css,
   subTitleWrapper,
   wrapper,
+  slideWrapper,
 } from "./style";
 import { Button } from "../Button";
-import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper/types";
 import "swiper/css";
 
@@ -59,6 +60,7 @@ export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
+        className={slideWrapper}
         spaceBetween={10}
         breakpoints={{
           0: {

@@ -8,7 +8,6 @@ export const header = css({
   flexDirection: 'row',
   alignItems: 'center',
   gap: '10px',
-  mb: "4",
 })
 
 export const titleWrapper = css({
@@ -33,3 +32,6 @@ export const arrowWrapper = css({
   gap: '10px',
 })
 
+export const slideWrapper = css({
+  paddingTop: '4 !important',
+})
