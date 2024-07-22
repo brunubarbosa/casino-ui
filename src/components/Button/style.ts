@@ -80,7 +80,7 @@ export const buttonWrapper = cva({
         paddingInline: '1',
         fontWeight: 'bolder'
       },
-      md: { height: '10', fontSize: 'sm', gap: '2', paddingInline: '10' },
+      md: { height: '10', fontSize: 'sm', gap: '2', paddingInline: '4', fontWeight: 'bolder' },
       lg: {minHeight: '20', paddingInline: '4' }
     },
     shape: {

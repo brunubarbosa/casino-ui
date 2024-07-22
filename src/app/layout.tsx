@@ -4,6 +4,7 @@ import "./globals.css";
 import { AgletSans } from "../styles/font";
 import { css, cx } from "@/styled-system/css";
 import { Footer } from "../components/Footer";
+import { Navbar } from "../components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${AgletSans.variable}`}>
       <body className={inter.className}>
+        <Navbar />
         <main
           className={css({
             display: "flex",
