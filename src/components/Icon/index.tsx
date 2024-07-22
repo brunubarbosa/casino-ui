@@ -9,6 +9,15 @@ const ICONS = [
   "menu-left",
   "spades",
   "american-football",
+  "telegram",
+  "x",
+  "discord",
+  "message",
+  "google",
+  "metamask",
+  "pig-nose",
+  "solana",
+  "rise",
 ] as const;
 
 export type IconType = (typeof ICONS)[number];
@@ -20,7 +29,7 @@ interface IconProps {
 }
 export const Icon = ({ width = 15, height = 15, name }: IconProps) => {
   return (
-    <Image
+    <img
       src={`/assets/icons/${name}.svg`}
       width={width}
       height={height}

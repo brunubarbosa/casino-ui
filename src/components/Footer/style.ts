@@ -8,7 +8,10 @@ export const mainTopLine = css({
 })
 export const mainBottomLine = css({
   display: "flex",
-  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
   gap: 3,
 
 })
@@ -51,12 +54,13 @@ export const linksWrapper = css({
 
 export const mainFooter = css({
   backgroundColor: 'elevation-3',
-  px: 10,
-  py: 5,
+  padding: 5,
   display: 'flex',
   flexDirection: 'column',
   gap: 8,
-
+  md: {
+    px: 10
+  }
 
 })
 

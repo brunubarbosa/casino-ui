@@ -5,13 +5,14 @@ import { css } from "@/styled-system/css";
 import { Box } from "@/styled-system/jsx";
 import { Badge } from "../Badge";
 import {
-  finantialCardBody,
-  finantialCardFooter,
-  finantialCardFooterContent,
-  finantialCardHeader,
-  finantialCardWrapper,
+  financialCardBody,
+  financialCardFooter,
+  financialCardFooterContent,
+  financialCardHeader,
+  financialCardWrapper,
   hstack,
 } from "./style";
+import { Icon } from "../Icon";
 
 interface FinancialCardProps {
   type: "crypto" | "stock";
@@ -32,8 +33,8 @@ export const FinancialCard: React.FC<FinancialCardProps> = ({
 }) => {
   return (
     <Card active={false}>
-      <Box className={finantialCardWrapper}>
-        <div className={finantialCardHeader}>
+      <Box className={financialCardWrapper}>
+        <div className={financialCardHeader}>
           <div className={hstack({})}>
             <Image
               width={30}
@@ -49,20 +50,21 @@ export const FinancialCard: React.FC<FinancialCardProps> = ({
               {name}
             </div>
           </div>
-          <Badge
-            type="success"
-            content={`${percentageChange > 0 ? "A" : "B"} ${percentageChange}%`}
-          />
+
+          <Badge type="success">
+            <Icon name="rise" width={10} height={10} />
+            <span>{percentageChange}%</span>
+          </Badge>
         </div>
-        <div className={finantialCardBody}>
+        <div className={financialCardBody}>
           <div>$ {price}</div>
         </div>
-        <div className={finantialCardFooter}>
-          <div className={finantialCardFooterContent}>
+        <div className={financialCardFooter}>
+          <div className={financialCardFooterContent}>
             <span>24 VOL</span>
             <span>${volume}M</span>
           </div>
-          <div className={finantialCardFooterContent}>
+          <div className={financialCardFooterContent}>
             <span>LEVERAGE</span>
             <span>{leverage}X</span>
           </div>

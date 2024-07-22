@@ -7,58 +7,102 @@ import { Card, FinancialCard, CategoryCard } from "../components/Card";
 import { ImageCard } from "../components/Card/ImageCard";
 import Image from "next/image";
 import { Button } from "../components/Button";
+import { Hero } from "../components/Hero";
+import { mainWrapper } from "./style";
 
 export default function Home() {
   return (
     <div>
-      <Carousel
-        title="esportes"
-        icon="spades"
-        subTitle={`TOTAL 24H VOLUME`}
-        items={[
-          <FinancialCard
-            type="stock"
-            name="BTC"
-            price="150.25"
-            volume="120"
-            leverage="100"
-            percentageChange={-1.56}
-          />,
-          <FinancialCard
-            type="stock"
-            name="BTC"
-            price="150.25"
-            volume="120"
-            leverage="100"
-            percentageChange={-1.56}
-          />,
-          <FinancialCard
-            type="stock"
-            name="BTC"
-            price="150.25"
-            volume="120"
-            leverage="100"
-            percentageChange={-1.56}
-          />,
-        ]}
-      ></Carousel>
-      <Carousel
-        title="esportes"
-        icon="spades"
-        subTitle={`TOTAL 24H VOLUME`}
-        items={[
-          <ImageCard />,
-          <ImageCard />,
-          <ImageCard />,
-          <ImageCard />,
-          <ImageCard />,
-          <ImageCard />,
-          <ImageCard />,
-          <ImageCard />,
-          <ImageCard />,
-        ]}
-      ></Carousel>
-      <Button onClick={() => {}} variant="text">
+      <Hero />
+      <main className={mainWrapper}>
+        <Carousel
+          title="esportes"
+          icon="spades"
+          subTitle={`TOTAL 24H VOLUME`}
+          items={[
+            <FinancialCard
+              type="stock"
+              name="BTC"
+              price="150.25"
+              volume="120"
+              leverage="100"
+              percentageChange={1.56}
+            />,
+            <FinancialCard
+              type="stock"
+              name="BTC"
+              price="150.25"
+              volume="120"
+              leverage="100"
+              percentageChange={1.56}
+            />,
+            <FinancialCard
+              type="stock"
+              name="BTC"
+              price="150.25"
+              volume="120"
+              leverage="100"
+              percentageChange={1.56}
+            />,
+            <FinancialCard
+              type="stock"
+              name="BTC"
+              price="150.25"
+              volume="120"
+              leverage="100"
+              percentageChange={1.56}
+            />,
+            <FinancialCard
+              type="stock"
+              name="BTC"
+              price="150.25"
+              volume="120"
+              leverage="100"
+              percentageChange={1.56}
+            />,
+            <FinancialCard
+              type="stock"
+              name="BTC"
+              price="150.25"
+              volume="120"
+              leverage="100"
+              percentageChange={-1.56}
+            />,
+          ]}
+        ></Carousel>
+        <Carousel
+          title="esportes"
+          icon="spades"
+          subTitle={`TOTAL 24H VOLUME`}
+          items={[
+            <ImageCard />,
+            <ImageCard />,
+            <ImageCard />,
+            <ImageCard />,
+            <ImageCard />,
+            <ImageCard />,
+            <ImageCard />,
+            <ImageCard />,
+            <ImageCard />,
+          ]}
+        ></Carousel>
+        <Carousel
+          title="esportes"
+          icon="spades"
+          subTitle={`TOTAL 24H VOLUME`}
+          items={[
+            <CategoryCard icon="volleyball" label="Voleibol" />,
+            <CategoryCard icon="volleyball" label="Voleibol" />,
+            <CategoryCard icon="volleyball" label="Voleibol" />,
+            <CategoryCard icon="volleyball" label="Voleibol" />,
+            <CategoryCard icon="volleyball" label="Voleibol" />,
+            <CategoryCard icon="volleyball" label="Voleibol" />,
+            <CategoryCard icon="volleyball" label="Voleibol" />,
+            <CategoryCard icon="volleyball" label="Voleibol" />,
+          ]}
+        ></Carousel>
+      </main>
+      {/* <Button onClick={() => {}} variant="text">
         Register
       </Button>
       <Button onClick={() => {}} variant="primary" size="sm">
@@ -72,7 +116,7 @@ export default function Home() {
       </Button>
       <Button onClick={() => {}} variant="outline" size="md">
         <Icon name="american-football" width={30} height={30} />
-      </Button>
+      </Button> */}
     </div>
   );
 }

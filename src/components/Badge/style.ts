@@ -5,7 +5,7 @@ export const badgeWrapper = cva({
   base: {
     display: "flex",
     rounded: "sm",
-    textStyle: "sm",
+    fontSize: 'xm',
     fontWeight: "bold",
     p: "2px",
   },

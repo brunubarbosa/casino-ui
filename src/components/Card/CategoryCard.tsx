@@ -1,20 +1,20 @@
 import React, { ReactNode } from "react";
 import { Card } from "./";
 import { css } from "@/styled-system/css";
-import { Icon } from "../Icon";
+import { Icon, IconType } from "../Icon";
 import { categoryCardWrapper } from "./style";
 
 interface CategoryCardProps {
-  icon: ReactNode;
-  name: string;
+  icon: IconType;
+  label: string;
 }
 
-export const CategoryCard: React.FC<CategoryCardProps> = ({ icon, name }) => {
+export const CategoryCard: React.FC<CategoryCardProps> = ({ icon, label }) => {
   return (
     <Card active={false}>
       <div className={categoryCardWrapper}>
-        <Icon name="volleyball" height={40} width={40} />
-        <span>tenis de mesa</span>
+        <Icon name={icon} height={40} width={40} />
+        <span>{label}</span>
       </div>
     </Card>
   );

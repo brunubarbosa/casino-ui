@@ -79,14 +79,41 @@ export const Footer = ({}: FooterProps) => {
           </div>
         </section>
         <section className={mainBottomLine}>
-          <Button onClick={() => {}} variant="primary" size="lg">
-            Join Discord's largest community of players now!
+          <Button
+            onClick={() => {}}
+            variant="social"
+            icon="discord"
+            size="lg"
+            color="primary"
+          >
+            <span>
+              Join <strong>Discord's largest community </strong>
+              of players now!
+            </span>
           </Button>
-          <Button onClick={() => {}} variant="primary" size="lg">
-            Join Discord's largest community of players now!
+          <Button
+            onClick={() => {}}
+            variant="social"
+            icon="telegram"
+            size="lg"
+            color="blue"
+          >
+            <span>
+              Pigmo is also on Telegram.
+              <strong> Discover more now</strong>
+            </span>
           </Button>
-          <Button onClick={() => {}} variant="primary" size="lg">
-            Join Discord's largest community of players now!
+          <Button
+            onClick={() => {}}
+            variant="social"
+            icon="x"
+            size="lg"
+            color="black"
+          >
+            <span>
+              Follow us on X and keep up
+              <strong> everything about us</strong>
+            </span>
           </Button>
         </section>
       </div>
@@ -99,7 +126,7 @@ export const Footer = ({}: FooterProps) => {
           </span>
         </div>
         <div className={contactWrapper}>
-          <Icon name="7" />
+          <Icon name="message" />
           <span>CONTACT US</span>
         </div>
       </div>

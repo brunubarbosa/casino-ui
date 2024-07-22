@@ -2,9 +2,9 @@ import React, { ReactNode } from "react";
 import { badgeWrapper } from "./style";
 
 interface BadgeProps {
-  content: string;
+  children: ReactNode;
   type: "success" | "error";
 }
-export const Badge = ({ content, type }: BadgeProps) => {
-  return <div className={badgeWrapper({ visual: type })}>{content}</div>;
+export const Badge = ({ children, type }: BadgeProps) => {
+  return <div className={badgeWrapper({ visual: type })}>{children}</div>;
 };

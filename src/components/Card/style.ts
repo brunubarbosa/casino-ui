@@ -12,7 +12,7 @@ export const categoryCardWrapper = css({
   fontWeight: "bolder",
   gap: '20px',
   fontSize: "sm",
-  width: "180",
+  maxWidth: 44,
   height: "150",
   display: "flex",
   justifyContent: "center",
@@ -33,11 +33,11 @@ export const categoryCardWrapper = css({
   },
 })
 
-export const finantialCardWrapper =  css({
-  border: "1px",
+export const financialCardWrapper =  css({
+  border: "1",
   rounded: "md",
-  p: "12px",
-  width: "180px",
+  p: 3,
+  maxWidth: 44,
   linearGradient: '128.58deg, #00000000 63.84%, #cc95d726 96.69%',
   _hover: {
     linearGradient: '129deg, #0000 63.84%, #ff00b833 96.69%',
@@ -48,24 +48,24 @@ export const finantialCardWrapper =  css({
     willChange: "transform",
   },
 })
-export const finantialCardHeader =  css({
+export const financialCardHeader =  css({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
 })
-export const finantialCardBody =  css({
-  borderY: "1px solid",
-  paddingY: "8px",
+export const financialCardBody =  css({
+  borderY: 1,
+  paddingY: 2,
   fontSize: "xl",
   fontWeight: "bolder",
 })
-export const finantialCardFooter =  css({
+export const financialCardFooter =  css({
   color: "low-contrast",
   fontWeight: "bold",
   fontSize: "sm",
-  paddingTop: "10px",
+  paddingTop: 3,
 })
-export const finantialCardFooterContent =  css({
+export const financialCardFooterContent =  css({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
