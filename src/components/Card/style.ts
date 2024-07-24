@@ -12,7 +12,6 @@ export const categoryCardWrapper = css({
   fontWeight: "bolder",
   gap: '20px',
   fontSize: "sm",
-  maxWidth: 44,
   height: "150",
   display: "flex",
   justifyContent: "center",
@@ -37,7 +36,6 @@ export const financialCardWrapper =  css({
   border: "1",
   rounded: "md",
   p: 3,
-  maxWidth: 44,
   linearGradient: '128.58deg, #00000000 63.84%, #cc95d726 96.69%',
   _hover: {
     linearGradient: '129deg, #0000 63.84%, #ff00b833 96.69%',

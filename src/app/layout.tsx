@@ -5,6 +5,9 @@ import { AgletSans } from "../styles/font";
 import { css, cx } from "@/styled-system/css";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
+import { Sidebar } from "../components/Sidebar";
+import { cq } from "@/styled-system/patterns";
+import { sidebarMockData } from "./mocks";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,17 +23,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${AgletSans.variable}`}>
-      <body className={inter.className}>
-        <Navbar />
-        <main
-          className={css({
-            display: "flex",
-            minHeight: "100vh",
-          })}
-        >
-          <div className={css({ width: "full" })}>{children}</div>
-        </main>
-        <Footer />
+      <body className={cx(inter.className, css({ margin: 0, padding: 0 }))}>
+        <div className={css({ display: "flex", minHeight: "100vh" })}>
+          <Sidebar menuItems={sidebarMockData.linkList} />
+          <div
+            className={css({
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+            })}
+          >
+            <Navbar />
+            <main
+              className={cx(
+                cq({ name: "content" }),
+                css({ flex: 1, display: "flex" })
+              )}
+            >
+              <div className={css({ width: "full" })}>{children}</div>
+            </main>
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );

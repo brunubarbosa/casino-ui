@@ -18,6 +18,8 @@ const ICONS = [
   "pig-nose",
   "solana",
   "rise",
+  "trophy",
+  "candles",
 ] as const;
 
 export type IconType = (typeof ICONS)[number];

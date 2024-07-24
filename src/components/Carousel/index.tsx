@@ -62,20 +62,22 @@ export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
         }}
         className={slideWrapper}
         spaceBetween={10}
+        breakpointsBase="container"
+        slidesPerView="auto"
         breakpoints={{
           0: {
+            slidesPerView: 1,
+          },
+          360: {
             slidesPerView: 2,
           },
-          400: {
-            slidesPerView: 2,
-          },
-          550: {
+          500: {
             slidesPerView: 3,
           },
-          750: {
+          650: {
             slidesPerView: 4,
           },
-          900: {
+          850: {
             slidesPerView: 5,
           },
         }}

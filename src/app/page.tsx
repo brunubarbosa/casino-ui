@@ -9,6 +9,7 @@ import Image from "next/image";
 import { Button } from "../components/Button";
 import { Hero } from "../components/Hero";
 import { mainWrapper } from "./style";
+import { SwitcherButton } from "../components/SwitcherButton";
 
 export default function Home() {
   return (
@@ -102,21 +103,6 @@ export default function Home() {
           ]}
         ></Carousel>
       </main>
-      {/* <Button onClick={() => {}} variant="text">
-        Register
-      </Button>
-      <Button onClick={() => {}} variant="primary" size="sm">
-        Register
-      </Button>
-      <Button onClick={() => {}} variant="primary" size="md">
-        Register
-      </Button>
-      <Button onClick={() => {}} variant="primary" size="lg">
-        Join Discord's largest community of players now!
-      </Button>
-      <Button onClick={() => {}} variant="outline" size="md">
-        <Icon name="american-football" width={30} height={30} />
-      </Button> */}
     </div>
   );
 }

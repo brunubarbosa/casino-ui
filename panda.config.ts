@@ -26,6 +26,7 @@ export default defineConfig({
   },
   theme: {
     extend: {
+      containerNames: ['sidebar', 'content'],
       tokens: {
         spacing: {
           '2xs': {value: '.75rem'}

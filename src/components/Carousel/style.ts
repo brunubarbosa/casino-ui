@@ -2,7 +2,12 @@ import { css } from '@/styled-system/css'
 export { css } from '@/styled-system/css'
 export { hstack } from '@/styled-system/patterns'
 
-export const wrapper = css({ maxWidth: "full" })
+export const wrapper = css({
+  maxWidth: 'full',
+  "@/4xl": {
+    maxWidth: '10/12'
+  }
+})
 export const header = css({
   display: 'flex',
   flexDirection: 'row',
