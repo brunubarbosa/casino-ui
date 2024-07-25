@@ -54,6 +54,22 @@ export const linkStyles = css({
   },
 });
 
+export const colapseItem = css({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  '& svg': {
+    transition: "transform .4s",
+  },
+  "&.expanded": {
+    color: "primary",
+    '& svg': {
+      transform: "rotate(-180deg)",
+      fill: "primary",
+    }
+
+  },
+})
 export const collapsibleContainer = css({
   display: "flex",
   flexDirection: "column",
@@ -71,12 +87,19 @@ export const collapsibleContainer = css({
 });
 
 export const subLink = css({
+  display: "flex",
+  alignItems: "center",
+  gap: 2,
   _hover: {
     backgroundColor: "neutral-100",
     color: "white",
     cursor: "pointer",
     borderRadius: "md",
     transition: "color, background-color .5s",
+
+    '& svg': {
+      fill: "primary",
+    }
   },
   _first: {
     marginTop: 2,

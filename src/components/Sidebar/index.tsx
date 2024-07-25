@@ -17,13 +17,15 @@ import {
   settingsWrapper,
   subLink,
   cq,
+  colapseItem,
 } from "./style";
 import Image from "next/image";
-import { Icon } from "../Icon";
+import { Icon, IconName } from "../Icon";
 import { SwitcherButton } from "../SwitcherButton";
 import { Badge } from "../Badge";
 import Link from "next/link";
 import { useSidebarStore } from "@/src/store/sidebar";
+import { token } from "@/styled-system/tokens";
 
 interface SidebarItemProps {
   label: string;
@@ -38,8 +40,17 @@ const SidebarItem = ({ label, children }: SidebarItemProps) => {
 
   return (
     <div className={cx(collapsibleContainer, isOpen && "expanded")}>
-      <div className={linkStyles} onClick={toggleCollapse}>
+      <div
+        className={cx(colapseItem, linkStyles, isOpen && "expanded")}
+        onClick={toggleCollapse}
+      >
         <span>{label}</span>
+        <Icon
+          name="arrow-down"
+          width={15}
+          height={15}
+          color={token("colors.low-contrast")}
+        />
       </div>
       <ul className={cx(collapsibleContent, isOpen && "expanded")}>
         {children}
@@ -51,6 +62,7 @@ const SidebarItem = ({ label, children }: SidebarItemProps) => {
 interface SubLinkProps {
   value: string;
   href: string;
+  icon: IconName;
 }
 interface SidebarProps {
   menuItems: {
@@ -90,8 +102,14 @@ export const Sidebar = ({ menuItems }: SidebarProps) => {
         {menuItems.map((item) => (
           <>
             <SidebarItem label={item.label}>
-              {item.subLink.map(({ value, href }) => (
+              {item.subLink.map(({ value, href, icon }) => (
                 <li className={cx(subLink, linkStyles)}>
+                  <Icon
+                    name={icon}
+                    width={15}
+                    height={15}
+                    color={token("colors.low-contrast")}
+                  />
                   <Link href={href}>{value}</Link>
                 </li>
               ))}

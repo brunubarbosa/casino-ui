@@ -59,12 +59,14 @@ export const highlightPrimary = css({
 export const actionsWrapper = css({
   display: 'flex',
   flexDirection: 'column',
-  gap: 2,
+  gap: 5,
   width: '8/12',
   maxWidth: '96',
   '@/7xl': {
     flexDirection: 'row',
     width: 'full',
+    gap: 2,
+
   }
 })
 export const mainButton = css({

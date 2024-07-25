@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
+
 import Spade from "@/public/assets/icons/spade.svg";
 import Seven from "@/public/assets/icons/7.svg";
 import Volleyball from "@/public/assets/icons/volleyball.svg";
 import ArrowLeft from "@/public/assets/icons/arrow-left.svg";
 import ArrowRight from "@/public/assets/icons/arrow-right.svg";
+import ArrowDown from "@/public/assets/icons/arrow-down.svg";
 import AmericanFootball from "@/public/assets/icons/american-football.svg";
 import telegram from "@/public/assets/icons/telegram.svg";
 import X from "@/public/assets/icons/x.svg";
@@ -28,6 +30,7 @@ const ICONS = {
   volleyball: Volleyball,
   "arrow-left": ArrowLeft,
   "arrow-right": ArrowRight,
+  "arrow-down": ArrowDown,
   spade: Spade,
   "american-football": AmericanFootball,
   telegram: telegram,
@@ -51,8 +54,8 @@ const ICONS = {
 export type IconName = keyof typeof ICONS;
 
 interface IconProps {
-  width: any;
-  height: any;
+  width: number | string;
+  height: number | string;
   name: IconName;
   color: string;
 }
