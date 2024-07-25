@@ -1,4 +1,5 @@
 import { cva } from '@/styled-system/css'
+export { cx } from '@/styled-system/css'
 
 export const buttonWrapper = cva({
   base: {

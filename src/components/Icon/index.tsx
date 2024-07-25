@@ -12,7 +12,6 @@ import Discord from "@/public/assets/icons/discord.svg";
 import Message from "@/public/assets/icons/message.svg";
 import Google from "@/public/assets/icons/google.svg";
 import Metamask from "@/public/assets/icons/metamask.svg";
-import PigNose from "@/public/assets/icons/pig-nose.svg";
 import Solana from "@/public/assets/icons/solana.svg";
 import Rise from "@/public/assets/icons/rise.svg";
 import Trophy from "@/public/assets/icons/trophy.svg";
@@ -37,7 +36,6 @@ const ICONS = {
   message: Message,
   google: Google,
   metamask: Metamask,
-  "pig-nose": PigNose,
   solana: Solana,
   rise: Rise,
   trophy: Trophy,

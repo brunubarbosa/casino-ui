@@ -1,13 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  css,
-  navbarWrapper,
-  logoStyles,
-  leftWrapper,
-  rightWrapper,
-} from "./style";
+import { css, navbarWrapper, leftWrapper, rightWrapper } from "./style";
 import { Button } from "../Button";
 import Image from "next/image";
 import { Icon } from "../Icon";
@@ -21,7 +15,7 @@ export const Navbar = () => {
         {/* TODO: ass "as" button */}
 
         <button onClick={() => toggleSidebar()}>
-          <Icon name="menu-hamburger" width={15} />
+          <Icon name="menu-hamburger" width={15} height={15} color="none" />
         </button>
         <Image
           src="/assets/gradient-logo.svg"

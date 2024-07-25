@@ -1,11 +1,67 @@
-import { css } from "@/styled-system/css";
-export { css } from "@/styled-system/css";
-
+import { css, cx } from "@/styled-system/css";
+export { cq } from "@/styled-system/patterns";
+export { cx } from "@/styled-system/css";
 
 export const wrapper = css({})
 export const mainTopLine = css({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: 10,
+
+  "@/5xl": {
+    flexDirection: 'row',
+
+  }
 
 })
+
+export const leftContent = css({
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+
+  gap: 8,
+  "@/md": {
+    flexDirection: 'row',
+
+  }
+
+})
+export const pigNose = css({
+  transform: "translateY(3px)",
+  "@/md": {
+    _last: {
+      marginLeft: -5,
+    }
+
+  }
+})
+export const spacedTextWrapper = css({
+  display: 'flex',
+  alignItems: 'center',
+  gap: 3,
+  color: 'low-contrast',
+  fontWeight: 'bolder',
+
+
+})
+export const lastSpacedWord = css({
+  color: 'white',
+
+})
+export const spacedText = css({
+  letterSpacing: 5,
+  height: 'fit-content',
+  fontSize: 'xs',
+  display: 'flex',
+  "@/2xl": {
+    letterSpacing: 20,
+  }
+
+})
+
 export const mainBottomLine = css({
   display: "flex",
   alignItems: 'center',
@@ -13,7 +69,6 @@ export const mainBottomLine = css({
   flexDirection: 'row',
   flexWrap: 'wrap',
   gap: 3,
-
 })
 export const linksWrapper = css({
   display: 'flex',
@@ -62,6 +117,10 @@ export const mainFooter = css({
     px: 10
   }
 
+})
+
+export const socialButtonText = css({
+  maxWidth: 80,
 })
 
 export const bottomFooter = css({

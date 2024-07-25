@@ -4,23 +4,60 @@ import React from "react";
 import {
   bottomFooter,
   contactWrapper,
+  lastSpacedWord,
+  leftContent,
   linksWrapper,
   mainBottomLine,
   mainFooter,
   mainTopLine,
+  pigNose,
   rightsContent,
+  spacedText,
+  spacedTextWrapper,
   wrapper,
+  cq,
+  cx,
+  socialButtonText,
 } from "./style";
 import { Button } from "../Button";
 import Link from "next/link";
 import { Icon } from "../Icon";
+import Image from "next/image";
+import { token } from "@/styled-system/tokens";
+import PigNose from "@/public/assets/pig-nose.svg";
 
 interface FooterProps {}
 export const Footer = ({}: FooterProps) => {
   return (
-    <footer className={wrapper}>
+    <footer className={cx(cq({ name: "footer" }), wrapper)}>
       <div className={mainFooter}>
         <section className={mainTopLine}>
+          <div className={leftContent}>
+            <Image
+              src="/assets/long-logo.svg"
+              width={150}
+              height={200}
+              alt="logo"
+            />
+            <div className={spacedTextWrapper}>
+              <PigNose
+                className={pigNose}
+                width={38}
+                height={38}
+                fill={token("colors.primary")}
+              />
+              <p className={spacedText}>
+                BEYOND
+                <span className={lastSpacedWord}> LUCK</span>
+              </p>
+              <PigNose
+                className={pigNose}
+                width={38}
+                height={38}
+                fill={token("colors.primary")}
+              />
+            </div>
+          </div>
           <div className={linksWrapper}>
             <div>
               <h2>PLATFORM</h2>
@@ -84,7 +121,7 @@ export const Footer = ({}: FooterProps) => {
             color="primary"
             iconSize="10"
           >
-            <span>
+            <span className={socialButtonText}>
               Join <strong>Discord's largest community </strong>
               of players now!
             </span>
@@ -95,9 +132,9 @@ export const Footer = ({}: FooterProps) => {
             icon="telegram"
             size="lg"
             color="blue"
-            iconSize="10"
+            iconSize="9"
           >
-            <span>
+            <span className={socialButtonText}>
               Pigmo is also on Telegram.
               <strong> Discover more now</strong>
             </span>
@@ -110,7 +147,7 @@ export const Footer = ({}: FooterProps) => {
             color="black"
             iconSize="10"
           >
-            <span>
+            <span className={socialButtonText}>
               Follow us on X and keep up
               <strong> everything about us</strong>
             </span>

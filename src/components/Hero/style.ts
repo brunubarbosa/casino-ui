@@ -5,6 +5,14 @@ export const wrapper = css({
   width: 'full',
   height: '350px'
 })
+
+export const contentWrapper = css({
+  width: 'full',
+  height: 'full',
+  overflow: 'hidden',
+  position: 'relative',
+})
+
 export const content = css({
   px: 5,
   display: 'flex',
@@ -14,26 +22,36 @@ export const content = css({
   height: 'full',
   position: 'relative',
   zIndex: 50,
-  maxWidth: 'xl',
+  maxWidth: '2xl',
   color: 'low-contrast',
   fontSize: 'sm',
   fontWeight: 'bolder',
   gap: 5,
   textAlign: 'center',
-  md: {
-  padding: '20',
 
+  "@/2xl": {
+    textAlign: 'start',
+    padding: '20',
+    alignItems: 'start',
   },
-
-  '& span': {
-    maxWidth: '10/12',
-  },
-  '& h1': {
-    fontSize: '2xl',
-    color: 'white',
-  }
 })
 
+export const heading = css({
+  fontSize: '26',
+  color: 'white',
+
+  "@/5xl": {
+    fontSize: '2.625rem',
+  },
+  "@/lg": {
+    fontSize: '2xl',
+  }
+})
+export const description = css({
+  fontSize: 'md',
+  maxWidth: '10/12',
+
+})
 export const highlightPrimary = css({
   color: 'primary'
 })
@@ -41,18 +59,19 @@ export const highlightPrimary = css({
 export const actionsWrapper = css({
   display: 'flex',
   flexDirection: 'column',
-  // alignItems: 'center',
   gap: 2,
   width: '8/12',
-  md: {
+  maxWidth: '96',
+  '@/7xl': {
     flexDirection: 'row',
-  width: 'full',
-
+    width: 'full',
   }
+})
+export const mainButton = css({
+  flexGrow: 1,
 })
 export const socialWrapper = css({
   display: 'flex',
-  width: 'full',
   justifyContent: 'center',
   gap: 3
 })
@@ -62,23 +81,14 @@ export const imageWrapper = css({
   height: "100%",
   width: "100%",
   top: "0",
-  md: {
+  right: "0",
+  opacity: '0.05',
+  "@/6xl": {
+  opacity: 1,
+
+  },
+  "@/2xl": {
     right: "-20%",
     top: 0
-  }
-})
-export const contentWrapper = css({
-  width: 'full',
-  height: 'full',
-  overflow: 'hidden',
-  position: 'relative',
-  '& img': {
-    right: 0,
-    height: 'full',
-    width: 'full',
-    opacity: '0.05',
-    lg: {
-    opacity: 1,
-    }
   }
 })

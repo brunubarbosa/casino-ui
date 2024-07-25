@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ReactNode } from "react";
-import { buttonWrapper } from "./style";
+import { buttonWrapper, cx } from "./style";
 import { Icon, IconName } from "../Icon";
 import { SizeToken, Token, token } from "@/styled-system/tokens";
 
@@ -14,6 +14,7 @@ interface BaseButtonProps {
   color?: "primary" | "blue" | "black";
   iconSize?: SizeToken;
   children?: string | ReactNode;
+  className?: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -33,18 +34,22 @@ export const Button = <
   onClick,
   disabled,
   color,
+  className,
   iconSize: _iconsize,
 }: ButtonProps<V>) => {
   const iconSize = token(`sizes.${_iconsize}` as Token, "1rem");
   return (
     <button
       onClick={onClick}
-      className={buttonWrapper({
-        visual: variant,
-        size: size,
-        shape: "rounded",
-        color,
-      })}
+      className={cx(
+        className,
+        buttonWrapper({
+          visual: variant,
+          size: size,
+          shape: "rounded",
+          color,
+        })
+      )}
       disabled={!!disabled}
     >
       {icon ? (

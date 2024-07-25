@@ -9,6 +9,9 @@ import {
   wrapper,
   highlightPrimary,
   socialWrapper,
+  description,
+  heading,
+  mainButton,
 } from "./style";
 import { Button } from "../Button";
 import Image from "next/image";
@@ -19,15 +22,20 @@ export const Hero = ({}: HeroProps) => {
     <div className={wrapper}>
       <div className={contentWrapper}>
         <div className={content}>
-          <h1>
+          <h1 className={heading}>
             Boas vindas ao <span className={highlightPrimary}>Pigmo</span>!
           </h1>
-          <span>
+          <span className={description}>
             Jogue inteligente conosco. Crie sua conta ou entre agora para ganhar
             recompensas
           </span>
           <div className={actionsWrapper}>
-            <Button variant="primary" size="md" onClick={() => {}}>
+            <Button
+              variant="primary"
+              size="md"
+              onClick={() => {}}
+              className={mainButton}
+            >
               QUERO ME REGISTRAR
             </Button>
             <div className={socialWrapper}>

@@ -65,7 +65,7 @@ export const Sidebar = ({ menuItems }: SidebarProps) => {
   return (
     <aside
       className={cx(
-        cq({ name: "content" }),
+        cq({ name: "sidebar" }),
         sidebarWrapper,
         isOpen ? "sidebar-open" : ""
       )}
