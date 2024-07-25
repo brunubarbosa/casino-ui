@@ -44,7 +44,7 @@ export const financialCardWrapper =  css({
   p: 3,
   linearGradient: '128.58deg, #00000000 63.84%, #cc95d726 96.69%',
   _hover: {
-    linearGradient: '129deg, #0000 63.84%, #ff00b833 96.69%',
+    background: `linear-gradient(129deg, rgba(204, 149, 215, 0.08) 63.84%, rgba(255, 0, 184, 0.2) 96.69%)`,
     translate: "auto",
     translateY: "-2%",
     cursor: "pointer",
