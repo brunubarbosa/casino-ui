@@ -13,8 +13,7 @@ export const Navbar = () => {
     <nav className={navbarWrapper}>
       <div className={rightWrapper}>
         {/* TODO: ass "as" button */}
-
-        <button onClick={() => toggleSidebar()}>
+        <button onClick={() => toggleSidebar()} aria-label="toggle sidebar">
           <Icon name="menu-hamburger" width={15} height={15} color="none" />
         </button>
         <Image

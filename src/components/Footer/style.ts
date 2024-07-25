@@ -108,7 +108,7 @@ export const linksWrapper = css({
 })
 
 export const mainFooter = css({
-  backgroundColor: 'elevation-3',
+  backgroundColor: 'dark',
   padding: 5,
   display: 'flex',
   flexDirection: 'column',

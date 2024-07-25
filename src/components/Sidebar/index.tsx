@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, ReactNode } from "react";
+import React, { useState, ReactNode, Fragment } from "react";
 import {
   profileData,
   profileDataWrapper,
@@ -62,7 +62,8 @@ const SidebarItem = ({ label, children }: SidebarItemProps) => {
 interface SubLinkProps {
   value: string;
   href: string;
-  icon: IconName;
+  icon: string;
+  id: string;
 }
 interface SidebarProps {
   menuItems: {
@@ -83,7 +84,23 @@ export const Sidebar = ({ menuItems }: SidebarProps) => {
       )}
     >
       <div className={sidebarHeader}>
-        <SwitcherButton />
+        <SwitcherButton
+          buttons={[
+            { label: "casino", icon: "spade", active: true, id: "5fsdHD6sd" },
+            {
+              label: "casino",
+              icon: "trophy",
+              active: false,
+              id: "5fsdHe2D6sd",
+            },
+            {
+              label: "casino",
+              icon: "candles",
+              active: false,
+              id: "5fsdtHDu6sd",
+            },
+          ]}
+        />
         <div className={profileDataWrapper}>
           <Image
             src="/assets/profile-placeholder.svg"
@@ -100,12 +117,12 @@ export const Sidebar = ({ menuItems }: SidebarProps) => {
       </div>
       <div className={sidebarContainer}>
         {menuItems.map((item) => (
-          <>
+          <Fragment key={item.id}>
             <SidebarItem label={item.label}>
-              {item.subLink.map(({ value, href, icon }) => (
-                <li className={cx(subLink, linkStyles)}>
+              {item.subLink.map(({ value, href, icon, id }) => (
+                <li className={cx(subLink, linkStyles)} key={id}>
                   <Icon
-                    name={icon}
+                    name={icon as IconName}
                     width={15}
                     height={15}
                     color={token("colors.low-contrast")}
@@ -114,7 +131,7 @@ export const Sidebar = ({ menuItems }: SidebarProps) => {
                 </li>
               ))}
             </SidebarItem>
-          </>
+          </Fragment>
         ))}
       </div>
 

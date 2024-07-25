@@ -12,6 +12,7 @@ import {
   description,
   heading,
   mainButton,
+  heroImage,
 } from "./style";
 import { Button } from "../Button";
 import Image from "next/image";
@@ -35,6 +36,7 @@ export const Hero = ({}: HeroProps) => {
               size="md"
               onClick={() => {}}
               className={mainButton}
+              aria-label="sign up"
             >
               QUERO ME REGISTRAR
             </Button>
@@ -44,27 +46,30 @@ export const Hero = ({}: HeroProps) => {
                 onClick={() => {}}
                 icon="google"
                 iconSize="5"
+                aria-label="google"
               />
               <Button
                 variant="outline"
                 onClick={() => {}}
                 icon="metamask"
                 iconSize="5"
+                aria-label="metamask"
               />
               <Button
                 variant="outline"
                 onClick={() => {}}
                 icon="solana"
                 iconSize="5"
+                aria-label="solana"
               />
             </div>
           </div>
         </div>
         <div className={imageWrapper}>
           <Image
+            className={heroImage}
             src="/assets/hero.svg"
             alt="hero image"
-            objectFit="cover"
             fill
           />
         </div>

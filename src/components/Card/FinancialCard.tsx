@@ -12,7 +12,6 @@ import {
   financialCardWrapper,
   hstack,
 } from "./style";
-import { Icon } from "../Icon";
 
 interface FinancialCardProps {
   type: "crypto" | "stock";
@@ -24,7 +23,6 @@ interface FinancialCardProps {
 }
 
 export const FinancialCard: React.FC<FinancialCardProps> = ({
-  type,
   name,
   price,
   volume,
@@ -51,7 +49,11 @@ export const FinancialCard: React.FC<FinancialCardProps> = ({
             </div>
           </div>
 
-          <Badge type="error" content={`${percentageChange}%`} icon="rise" />
+          <Badge
+            type={percentageChange > 0 ? "success" : "error"}
+            content={`${percentageChange}%`}
+            icon="rise"
+          />
         </div>
         <div className={financialCardBody}>
           <div>$ {price}</div>

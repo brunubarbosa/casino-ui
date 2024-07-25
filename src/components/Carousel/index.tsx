@@ -21,12 +21,35 @@ import { Swiper as SwiperType } from "swiper/types";
 import "swiper/css";
 
 interface CarouselProps {
-  items: ReactNode[];
+  items: { item: ReactNode; id: string }[];
   title: string;
   subTitle?: ReactNode | string;
   icon: IconName;
 }
 
+const CAROUSEL_BREAKPOINTS = {
+  0: {
+    slidesPerView: 2,
+  },
+  360: {
+    slidesPerView: 2,
+  },
+  500: {
+    slidesPerView: 3,
+  },
+  650: {
+    slidesPerView: 4,
+  },
+  850: {
+    slidesPerView: 5,
+  },
+  1000: {
+    slidesPerView: 6,
+  },
+  1100: {
+    slidesPerView: 7,
+  },
+};
 export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
   const swiperRef = useRef<SwiperType | null>(null);
 
@@ -54,6 +77,7 @@ export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
             size="sm"
             icon="arrow-left"
             iconSize="3"
+            aria-label="previous slide"
           />
           <Button
             onClick={() => {
@@ -63,6 +87,7 @@ export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
             size="sm"
             icon="arrow-right"
             iconSize="3"
+            aria-label="next slide"
           />
         </div>
       </div>
@@ -74,32 +99,10 @@ export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
         spaceBetween={10}
         breakpointsBase="container"
         slidesPerView="auto"
-        breakpoints={{
-          0: {
-            slidesPerView: 2,
-          },
-          360: {
-            slidesPerView: 2,
-          },
-          500: {
-            slidesPerView: 3,
-          },
-          650: {
-            slidesPerView: 4,
-          },
-          850: {
-            slidesPerView: 5,
-          },
-          1000: {
-            slidesPerView: 6,
-          },
-          1100: {
-            slidesPerView: 7,
-          },
-        }}
+        breakpoints={CAROUSEL_BREAKPOINTS}
       >
-        {items.map((item) => (
-          <SwiperSlide>{item}</SwiperSlide>
+        {items.map(({ item, id }) => (
+          <SwiperSlide key={id}>{item}</SwiperSlide>
         ))}
       </Swiper>
     </div>

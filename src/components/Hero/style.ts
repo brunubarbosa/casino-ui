@@ -3,7 +3,7 @@ export {hstack, stack} from '@/styled-system/patterns'
 
 export const wrapper = css({
   width: 'full',
-  height: '350px'
+  height: '350px',
 })
 
 export const contentWrapper = css({
@@ -94,3 +94,9 @@ export const imageWrapper = css({
     top: 0
   }
 })
+
+export const heroImage = css({
+  objectFit: 'cover',
+  width: 'full',
+  height: 'full',
+}) 

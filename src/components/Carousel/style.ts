@@ -26,8 +26,9 @@ export const titleWrapper = css({
 })
 
 export const subTitleWrapper = css({
+  display: "none",
   md: { display: "inline" },
-  base: { display: "none" },
+  
 })
 
 export const arrowWrapper = css({

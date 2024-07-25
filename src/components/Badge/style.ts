@@ -9,7 +9,8 @@ export const badgeWrapper = cva({
     fontWeight: "bold",
     alignItems: "center",
     gap: 1,
-    p: "2px",
+    paddingX: "4px",
+    paddingY: "2px",
     lineHeight: 1
   },
   variants: {

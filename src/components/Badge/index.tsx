@@ -15,8 +15,8 @@ export const Badge = ({ content, type, icon }: BadgeProps) => {
         <Icon
           name={icon}
           color={token(`colors.${type}`)}
-          width={7.85}
-          height={7.85}
+          width={10}
+          height={10}
         />
       ) : null}
       <span>{content}</span>

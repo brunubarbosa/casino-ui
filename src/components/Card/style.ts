@@ -36,6 +36,18 @@ export const categoryCardWrapper = css({
       }
     },
   },
+  _before: {
+    content: '" "',
+    display: "inline-block",
+    boxShadow: '0 34px 68px #a997b5',
+    width: "50px",
+    height: "100px",
+    position: "absolute",
+    top: "154px",
+    zIndex: "-100",
+    borderRadius: "md",
+  },
+
 })
 
 export const financialCardWrapper =  css({

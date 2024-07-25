@@ -16,7 +16,7 @@ export const buttonWrapper = cva({
   },
   variants: {
     visual: {
-      primary: { 
+      primary: {
         color: 'white',
         radialGradient: '50% 100% at 50% 0,var(--colors-secondary) 0,var(--colors-primary) 100%',
         backgroundColor: 'var(--colors-primary)',
@@ -70,9 +70,9 @@ export const buttonWrapper = cva({
           boxShadow: '0px 11px 26.8px 0px #2CA5D612'
 
         },
-        black: {
+        dark: {
           background: `linear-gradient(96.45deg, #0D0B0C 19.95%, #1C1717 115.62%)`,
-          border: '1px solid var(--low-contrast)',
+          border: '1px solid var(--colors-neutral-300)',
           boxShadow: '0px 11px 26.8px 0px #2A1A2F4A',
   
         }
@@ -81,7 +81,8 @@ export const buttonWrapper = cva({
     size: {
       sm: {
         fontSize: 'xm',
-        paddingInline: '1',
+        paddingX: 2,
+        paddingY: 1,
         fontWeight: 'bolder'
       },
       md: { height: '10', fontSize: 'sm', gap: '2', paddingInline: '4', fontWeight: 'bolder' },

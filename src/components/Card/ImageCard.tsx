@@ -3,16 +3,16 @@ import { Card } from "./";
 import Image from "next/image";
 import { imageCardWrapper } from "./style";
 
-export const ImageCard = ({}) => {
+interface ImageCardProps {
+  url: string;
+  alt: string;
+}
+
+export const ImageCard = ({ url, alt }: ImageCardProps) => {
   return (
     <Card active={false}>
       <div className={imageCardWrapper}>
-        <Image
-          src="/assets/thumbs/originals.png"
-          width={165}
-          height={200}
-          alt="Originals Thumb"
-        />
+        <Image src={url} width={165} height={200} alt={alt} />
       </div>
     </Card>
   );

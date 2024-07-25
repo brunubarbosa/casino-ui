@@ -10,8 +10,7 @@ type SocialIconType = "telegram" | "x" | "discord";
 interface BaseButtonProps {
   disabled?: boolean;
   size?: "sm" | "md" | "lg";
-  //todo: rename colors
-  color?: "primary" | "blue" | "black";
+  color?: "primary" | "blue" | "dark";
   iconSize?: SizeToken;
   children?: string | ReactNode;
   className?: string;

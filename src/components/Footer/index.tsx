@@ -135,7 +135,7 @@ export const Footer = ({}: FooterProps) => {
             variant="social"
             icon="x"
             size="lg"
-            color="black"
+            color="dark"
             iconSize="10"
           >
             <span className={socialButtonText}>

@@ -39,6 +39,7 @@ export default defineConfig({
           "elevation-1": { value: '#170D19'},
           "elevation-2": { value: '#251929' },
           "elevation-3": { value: '#35243D' },
+          "dark": { value: '#120B14' },
           "low-contrast": { value: '#826B8E' },
           "error": { value: '#DE3449' },
           "success": { value: '#24D861' },
