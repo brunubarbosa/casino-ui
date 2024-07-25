@@ -9,7 +9,7 @@ export const ImageCard = ({}) => {
       <div className={imageCardWrapper}>
         <Image
           src="/assets/thumbs/originals.png"
-          width={150}
+          width={165}
           height={200}
           alt="Originals Thumb"
         />

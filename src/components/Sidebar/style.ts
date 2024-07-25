@@ -4,9 +4,15 @@ export { cq } from "@/styled-system/patterns";
 
 export const sidebarWrapper = css({
   width: '240px',
+  maxWidth: 0,
+  overflowX: 'hidden',
   height: 'auto',
   backgroundColor: 'neutral-100',
   borderRight: 1,
+  transition: "max-width .3s",
+  '&.sidebar-open': {
+    maxWidth: '240px',
+  }
 })
 export const sidebarHeader = css({
   display: 'flex',
@@ -29,16 +35,14 @@ export const profileData = css({
   color: 'low-contrast',
   '& h2': {
     color: 'white',
-    fontWeight: 'bolder'
+    fontWeight: 'bolder',
+    textWrap: 'nowrap',
   },
 })
 
 export const sidebarContainer = css({
   width: "full",
   color: "low-contrast",
-  // padding: "1rem",
-  // height: "100vh",
-  overflowY: "auto",
 });
 
 export const linkStyles = css({

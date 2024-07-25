@@ -66,7 +66,7 @@ export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
         slidesPerView="auto"
         breakpoints={{
           0: {
-            slidesPerView: 1,
+            slidesPerView: 2,
           },
           360: {
             slidesPerView: 2,
@@ -79,6 +79,12 @@ export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
           },
           850: {
             slidesPerView: 5,
+          },
+          1000: {
+            slidesPerView: 6,
+          },
+          1100: {
+            slidesPerView: 7,
           },
         }}
       >

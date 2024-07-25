@@ -6,7 +6,6 @@ const ICONS = [
   "volleyball",
   "arrow-left",
   "arrow-right",
-  "menu-left",
   "spades",
   "american-football",
   "telegram",
@@ -20,6 +19,7 @@ const ICONS = [
   "rise",
   "trophy",
   "candles",
+  "menu-hamburger",
 ] as const;
 
 export type IconType = (typeof ICONS)[number];

@@ -11,13 +11,18 @@ import {
 import { Button } from "../Button";
 import Image from "next/image";
 import { Icon } from "../Icon";
+import { useSidebarStore } from "@/src/store/sidebar";
 
 export const Navbar = () => {
+  const { toggle: toggleSidebar } = useSidebarStore();
   return (
     <nav className={navbarWrapper}>
       <div className={rightWrapper}>
-        <Icon name="menu-left" width={25} />
+        {/* TODO: ass "as" button */}
 
+        <button onClick={() => toggleSidebar()}>
+          <Icon name="menu-hamburger" width={15} />
+        </button>
         <Image
           src="/assets/gradient-logo.svg"
           width={100}

@@ -1,15 +1,10 @@
 "use client";
 
-import { styled } from "../../styled-system/jsx";
 import { Carousel } from "../components/Carousel";
-import { Icon } from "../components/Icon";
 import { Card, FinancialCard, CategoryCard } from "../components/Card";
 import { ImageCard } from "../components/Card/ImageCard";
-import Image from "next/image";
-import { Button } from "../components/Button";
 import { Hero } from "../components/Hero";
 import { mainWrapper } from "./style";
-import { SwitcherButton } from "../components/SwitcherButton";
 
 export default function Home() {
   return (
@@ -60,6 +55,22 @@ export default function Home() {
               volume="120"
               leverage="100"
               percentageChange={1.56}
+            />,
+            <FinancialCard
+              type="stock"
+              name="BTC"
+              price="150.25"
+              volume="120"
+              leverage="100"
+              percentageChange={-1.56}
+            />,
+            <FinancialCard
+              type="stock"
+              name="BTC"
+              price="150.25"
+              volume="120"
+              leverage="100"
+              percentageChange={-1.56}
             />,
             <FinancialCard
               type="stock"

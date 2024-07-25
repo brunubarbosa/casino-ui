@@ -23,6 +23,7 @@ import { Icon } from "../Icon";
 import { SwitcherButton } from "../SwitcherButton";
 import { Badge } from "../Badge";
 import Link from "next/link";
+import { useSidebarStore } from "@/src/store/sidebar";
 
 interface SidebarItemProps {
   label: string;
@@ -60,8 +61,15 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({ menuItems }: SidebarProps) => {
+  const { isOpen } = useSidebarStore();
   return (
-    <aside className={cx(cq({ name: "content" }), sidebarWrapper)}>
+    <aside
+      className={cx(
+        cq({ name: "content" }),
+        sidebarWrapper,
+        isOpen ? "sidebar-open" : ""
+      )}
+    >
       <div className={sidebarHeader}>
         <SwitcherButton />
         <div className={profileDataWrapper}>
