@@ -93,6 +93,47 @@ export default defineConfig({
         scrollbarWidth: 'thin',
         webkitOverflowScrolling: 'touch'
         
+      },
+      "html": {
+        MozOsxFontSmoothing: 'grayscale',
+        WebkitFontSmoothing: 'antialiased',
+        textRendering: 'optimizeLegibility',
+        overflowX: 'hidden',
+        scrollBehavior: 'smooth',
+        height: '100%',
+        width: '100%',
+        backgroundColor: 'var(--colors-neutral-100)',
+        color: 'var(--colors-white)',
+        fontFamily: 'var(--font-aglet-sans)',
+        MozTextSizeAdjust: '100%',
+        WebkitTextSizeAdjust: '100%',
+        lineHeight: '1.5',
+      },
+      "body": {
+        background: 'var(--colors-neutral-100)',
+        color: 'var(--colors-white)'
+      },
+      "button": {
+        appearance: 'none',
+        MozAppearance: 'none',
+        WebkitAppearance: 'none',
+        cursor: 'pointer',
+      },
+      "::selection": {
+        background: 'var(--colors-pink-900)',
+        color: 'var(--colors-white)'
+      },
+      "::-moz-placeholder": {
+      "opacity":"1",
+        "color": "var(--colors-text-secondary)"
+      },
+      "::placeholder": {
+      "opacity":"1",
+        "color": "var(--colors-text-secondary)"
+      },
+      "::-moz-selection": {
+      "background":" var(--colors-pink-900)",
+        "color": "var(--colors-white)"
       }
     }
   }

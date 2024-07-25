@@ -23,7 +23,7 @@ export const activeButtonProperties: Styles = {
   borderRadius: 'md',
   cursor: 'pointer',
   '& span': {
-    maxWidth: '100px',
+    maxWidth: '6.25rem',
     animation: `max-width`
   },
   '& svg': {
@@ -45,7 +45,7 @@ export const buttonStyle = css({
   _hover: {
     ...activeButtonProperties,
     '& span': {
-      maxWidth: '100px',
+      maxWidth: '6.25rem',
       animation: `max-width`,
     },
   },

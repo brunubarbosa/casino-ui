@@ -6,12 +6,20 @@ export const sidebarWrapper = css({
   width: '240px',
   maxWidth: 0,
   overflowX: 'hidden',
-  height: 'auto',
   backgroundColor: 'neutral-100',
   borderRightWidth: 1,
   transition: "max-width .3s",
+
+  position: 'fixed',
+  height: 'screen',
+  zIndex: 100,
   '&.sidebar-open': {
     maxWidth: '240px',
+  },
+  sm: {
+    height: 'auto',
+    position: 'static',
+
   }
 })
 export const sidebarHeader = css({

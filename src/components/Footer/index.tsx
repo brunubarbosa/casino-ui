@@ -99,15 +99,6 @@ export const Footer = ({}: FooterProps) => {
                 <li>
                   <Link href="">Facebook</Link>
                 </li>
-                <li>
-                  <Link href="">Telegram</Link>
-                </li>
-                <li>
-                  <Link href="">Discord</Link>
-                </li>
-                <li>
-                  <Link href="">Zealy</Link>
-                </li>
               </ul>
             </div>
           </div>

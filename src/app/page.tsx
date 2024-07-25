@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <main className={mainWrapper}>
+      <div className={mainWrapper}>
         <Carousel
           title="criptomoedas"
           icon="spade"
@@ -111,7 +111,7 @@ export default function Home() {
             <CategoryCard icon="snooker" label="snooker" />,
           ]}
         ></Carousel>
-      </main>
+      </div>
     </div>
   );
 }
