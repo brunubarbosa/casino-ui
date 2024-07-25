@@ -51,9 +51,6 @@ export const Footer = ({}: FooterProps) => {
               </ul>
             </div>
             <div>
-              {/* flex: 1 1 calc(33.333% - 20px)
-              minWidth: 200px
-              boxSizing: border-box */}
               <h2>COMMUNITY</h2>
               <ul>
                 <li>
@@ -85,6 +82,7 @@ export const Footer = ({}: FooterProps) => {
             icon="discord"
             size="lg"
             color="primary"
+            iconSize="10"
           >
             <span>
               Join <strong>Discord's largest community </strong>
@@ -97,6 +95,7 @@ export const Footer = ({}: FooterProps) => {
             icon="telegram"
             size="lg"
             color="blue"
+            iconSize="10"
           >
             <span>
               Pigmo is also on Telegram.
@@ -109,6 +108,7 @@ export const Footer = ({}: FooterProps) => {
             icon="x"
             size="lg"
             color="black"
+            iconSize="10"
           >
             <span>
               Follow us on X and keep up
@@ -126,7 +126,7 @@ export const Footer = ({}: FooterProps) => {
           </span>
         </div>
         <div className={contactWrapper}>
-          <Icon name="message" />
+          <Icon name="message" color="none" height={18} width={18} />
           <span>CONTACT US</span>
         </div>
       </div>

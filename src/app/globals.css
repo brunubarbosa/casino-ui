@@ -15,18 +15,6 @@ html {
 }
 
 
-*,:after,:before {
-  box-sizing: border-box;
-  border-color: var(--colors-border);
-  border-style: solid
-}
-
-* {
-  scrollbar-color: var(--colors-neutral-300) transparent;
-  scrollbar-width: thin;
-  -webkit-overflow-scrolling: touch
-}
-
 ::-moz-placeholder {
   opacity: 1;
   color: var(--colors-text-secondary)

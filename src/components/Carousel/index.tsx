@@ -2,7 +2,9 @@
 
 import React, { ReactNode, useRef } from "react";
 import Image from "next/image";
-import { Icon, IconType } from "../Icon";
+import { Icon, IconName } from "../Icon";
+import { token } from "@/styled-system/tokens";
+
 import {
   arrowWrapper,
   header,
@@ -22,17 +24,23 @@ interface CarouselProps {
   items: ReactNode[];
   title: string;
   subTitle?: ReactNode | string;
-  icon: IconType;
+  icon: IconName;
 }
 
 export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
   const swiperRef = useRef<SwiperType | null>(null);
+
   return (
     <div className={wrapper}>
       <div className={header}>
         <div className={hstack()}>
           <span className={titleWrapper}>
-            <Icon width={20} height={20} name={icon} />
+            <Icon
+              width={20}
+              height={20}
+              name={icon}
+              color={token("colors.primary")}
+            />
             {title}
           </span>
           <span className={subTitleWrapper}>{subTitle}</span>
@@ -45,6 +53,7 @@ export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
             variant="icon"
             size="sm"
             icon="arrow-left"
+            iconSize="3"
           />
           <Button
             onClick={() => {
@@ -53,6 +62,7 @@ export const Carousel = ({ items, title, subTitle, icon }: CarouselProps) => {
             variant="icon"
             size="sm"
             icon="arrow-right"
+            iconSize="3"
           />
         </div>
       </div>

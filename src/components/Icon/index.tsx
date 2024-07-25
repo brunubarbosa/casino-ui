@@ -1,41 +1,64 @@
 import React from "react";
 import Image from "next/image";
+import Spade from "@/public/assets/icons/spade.svg";
+import Seven from "@/public/assets/icons/7.svg";
+import Volleyball from "@/public/assets/icons/volleyball.svg";
+import ArrowLeft from "@/public/assets/icons/arrow-left.svg";
+import ArrowRight from "@/public/assets/icons/arrow-right.svg";
+import AmericanFootball from "@/public/assets/icons/american-football.svg";
+import telegram from "@/public/assets/icons/telegram.svg";
+import X from "@/public/assets/icons/x.svg";
+import Discord from "@/public/assets/icons/discord.svg";
+import Message from "@/public/assets/icons/message.svg";
+import Google from "@/public/assets/icons/google.svg";
+import Metamask from "@/public/assets/icons/metamask.svg";
+import PigNose from "@/public/assets/icons/pig-nose.svg";
+import Solana from "@/public/assets/icons/solana.svg";
+import Rise from "@/public/assets/icons/rise.svg";
+import Trophy from "@/public/assets/icons/trophy.svg";
+import Candles from "@/public/assets/icons/candles.svg";
+import Snooker from "@/public/assets/icons/snooker.svg";
+import PingPong from "@/public/assets/icons/ping-pong.svg";
+import Golf from "@/public/assets/icons/golf.svg";
+import Boxe from "@/public/assets/icons/boxe.svg";
+import Mma from "@/public/assets/icons/mma.svg";
+import MenuHamburger from "@/public/assets/icons/menu-hamburger.svg";
 
-const ICONS = [
-  "7",
-  "volleyball",
-  "arrow-left",
-  "arrow-right",
-  "spades",
-  "american-football",
-  "telegram",
-  "x",
-  "discord",
-  "message",
-  "google",
-  "metamask",
-  "pig-nose",
-  "solana",
-  "rise",
-  "trophy",
-  "candles",
-  "menu-hamburger",
-] as const;
+const ICONS = {
+  "7": Seven,
+  volleyball: Volleyball,
+  "arrow-left": ArrowLeft,
+  "arrow-right": ArrowRight,
+  spade: Spade,
+  "american-football": AmericanFootball,
+  telegram: telegram,
+  x: X,
+  discord: Discord,
+  message: Message,
+  google: Google,
+  metamask: Metamask,
+  "pig-nose": PigNose,
+  solana: Solana,
+  rise: Rise,
+  trophy: Trophy,
+  candles: Candles,
+  "menu-hamburger": MenuHamburger,
+  snooker: Snooker,
+  "ping-pong": PingPong,
+  golf: Golf,
+  boxe: Boxe,
+  mma: Mma,
+} as const;
 
-export type IconType = (typeof ICONS)[number];
+export type IconName = keyof typeof ICONS;
 
 interface IconProps {
-  width?: number;
-  height?: number;
-  name: IconType;
+  width: any;
+  height: any;
+  name: IconName;
+  color: string;
 }
-export const Icon = ({ width = 15, height = 15, name }: IconProps) => {
-  return (
-    <img
-      src={`/assets/icons/${name}.svg`}
-      width={width}
-      height={height}
-      alt={`${name} icon`}
-    />
-  );
+export const Icon = ({ width, height, name, color }: IconProps) => {
+  const IconComponent = ICONS[name];
+  return <IconComponent width={width} height={height} fill={color} />;
 };

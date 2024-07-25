@@ -8,7 +8,7 @@ export const sidebarWrapper = css({
   overflowX: 'hidden',
   height: 'auto',
   backgroundColor: 'neutral-100',
-  borderRight: 1,
+  borderRightWidth: 1,
   transition: "max-width .3s",
   '&.sidebar-open': {
     maxWidth: '240px',
@@ -94,7 +94,7 @@ export const collapsibleContent = css({
   paddingX: 1,
   paddingY: 0,
   backgroundColor: "neutral-200",
-  borderTop: 1,
+  borderTopWidth: 1,
   "&.expanded": {
     maxHeight: "500px",
   },

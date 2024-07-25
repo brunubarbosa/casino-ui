@@ -83,10 +83,7 @@ export const Sidebar = ({ menuItems }: SidebarProps) => {
             <h2>Pigmo Coin</h2>
             <span>$0.0000</span>
           </div>
-          <Badge type="success">
-            <Icon name="rise" width={10} height={10} />
-            <span>2.26%</span>
-          </Badge>
+          <Badge type="success" content="2.26%" icon="rise"></Badge>
         </div>
       </div>
       <div className={sidebarContainer}>

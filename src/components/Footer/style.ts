@@ -88,5 +88,6 @@ export const rightsContent = css({
 export const contactWrapper = css({
   display: 'flex',
   gap: 2,
-  fontWeight: 'bolder'
+  fontWeight: 'bolder',
+  alignItems: 'center',
 })

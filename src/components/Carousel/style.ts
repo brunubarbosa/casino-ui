@@ -4,8 +4,9 @@ export { hstack } from '@/styled-system/patterns'
 
 export const wrapper = css({
   maxWidth: 'full',
+  width: 'full',
   "@/4xl": {
-    maxWidth: '10/12'
+    maxWidth: '9/12'
   }
 })
 export const header = css({

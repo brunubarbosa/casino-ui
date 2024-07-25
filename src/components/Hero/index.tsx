@@ -31,9 +31,24 @@ export const Hero = ({}: HeroProps) => {
               QUERO ME REGISTRAR
             </Button>
             <div className={socialWrapper}>
-              <Button variant="outline" onClick={() => {}} icon="google" />
-              <Button variant="outline" onClick={() => {}} icon="metamask" />
-              <Button variant="outline" onClick={() => {}} icon="solana" />
+              <Button
+                variant="outline"
+                onClick={() => {}}
+                icon="google"
+                iconSize="5"
+              />
+              <Button
+                variant="outline"
+                onClick={() => {}}
+                icon="metamask"
+                iconSize="5"
+              />
+              <Button
+                variant="outline"
+                onClick={() => {}}
+                icon="solana"
+                iconSize="5"
+              />
             </div>
           </div>
         </div>

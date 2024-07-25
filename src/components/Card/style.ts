@@ -21,7 +21,7 @@ export const categoryCardWrapper = css({
   rounded: "xl",
   flexDirection: "column",
   textTransform: "uppercase",
-  border: "1px",
+  borderWidth: 1,
   color: 'low-contrast',
   _hover: {
     color: "white",
@@ -29,11 +29,17 @@ export const categoryCardWrapper = css({
     boxShadow: `0px 0px 62px 3px #35243D`,
     transition: "color .15s",
     willChange: "transform",
+
+    _hover: {
+      '& [class*="force-white-fill"]': {
+        fill: "white",
+      }
+    },
   },
 })
 
 export const financialCardWrapper =  css({
-  border: "1",
+  borderWidth: 1,
   rounded: "md",
   p: 3,
   linearGradient: '128.58deg, #00000000 63.84%, #cc95d726 96.69%',
@@ -52,7 +58,7 @@ export const financialCardHeader =  css({
   justifyContent: "space-between",
 })
 export const financialCardBody =  css({
-  borderY: 1,
+  borderYWidth: 1,
   paddingY: 2,
   fontSize: "xl",
   fontWeight: "bolder",

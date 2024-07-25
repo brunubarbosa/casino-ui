@@ -2,7 +2,8 @@
 
 import React, { ReactNode } from "react";
 import { buttonWrapper } from "./style";
-import { Icon, IconType } from "../Icon";
+import { Icon, IconName } from "../Icon";
+import { SizeToken, Token, token } from "@/styled-system/tokens";
 
 type SocialIconType = "telegram" | "x" | "discord";
 
@@ -11,6 +12,7 @@ interface BaseButtonProps {
   size?: "sm" | "md" | "lg";
   //todo: rename colors
   color?: "primary" | "blue" | "black";
+  iconSize?: SizeToken;
   children?: string | ReactNode;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
@@ -19,7 +21,7 @@ type ButtonProps<V extends "primary" | "text" | "icon" | "outline" | "social"> =
   BaseButtonProps &
     (V extends "social"
       ? { variant: V; icon: SocialIconType }
-      : { variant?: V; icon?: IconType });
+      : { variant?: V; icon?: IconName });
 
 export const Button = <
   V extends "primary" | "text" | "icon" | "outline" | "social",
@@ -31,12 +33,9 @@ export const Button = <
   onClick,
   disabled,
   color,
+  iconSize: _iconsize,
 }: ButtonProps<V>) => {
-  const isSocialButton = variant === "social";
-  const iconSize = {
-    width: isSocialButton ? 30 : 8,
-    height: isSocialButton ? 30 : 15,
-  };
+  const iconSize = token(`sizes.${_iconsize}` as Token, "1rem");
   return (
     <button
       onClick={onClick}
@@ -48,7 +47,9 @@ export const Button = <
       })}
       disabled={!!disabled}
     >
-      {icon ? <Icon name={icon} {...iconSize} /> : null}
+      {icon ? (
+        <Icon name={icon} width={iconSize} height={iconSize} color="white" />
+      ) : null}
       {children}
     </button>
   );

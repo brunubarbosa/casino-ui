@@ -1,10 +1,25 @@
 import React, { ReactNode } from "react";
 import { badgeWrapper } from "./style";
+import { Icon, IconName } from "../Icon";
+import { token } from "@/styled-system/tokens";
 
 interface BadgeProps {
-  children: ReactNode;
+  content: string;
+  icon?: IconName;
   type: "success" | "error";
 }
-export const Badge = ({ children, type }: BadgeProps) => {
-  return <div className={badgeWrapper({ visual: type })}>{children}</div>;
+export const Badge = ({ content, type, icon }: BadgeProps) => {
+  return (
+    <div className={badgeWrapper({ visual: type })}>
+      {icon ? (
+        <Icon
+          name={icon}
+          color={token(`colors.${type}`)}
+          width={7.85}
+          height={7.85}
+        />
+      ) : null}
+      <span>{content}</span>
+    </div>
+  );
 };

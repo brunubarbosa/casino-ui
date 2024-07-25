@@ -12,8 +12,8 @@ export default function Home() {
       <Hero />
       <main className={mainWrapper}>
         <Carousel
-          title="esportes"
-          icon="spades"
+          title="criptomoedas"
+          icon="spade"
           subTitle={`TOTAL 24H VOLUME`}
           items={[
             <FinancialCard
@@ -83,8 +83,8 @@ export default function Home() {
           ]}
         ></Carousel>
         <Carousel
-          title="esportes"
-          icon="spades"
+          title="cassino"
+          icon="spade"
           subTitle={`TOTAL 24H VOLUME`}
           items={[
             <ImageCard />,
@@ -100,17 +100,15 @@ export default function Home() {
         ></Carousel>
         <Carousel
           title="esportes"
-          icon="spades"
+          icon="spade"
           subTitle={`TOTAL 24H VOLUME`}
           items={[
+            <CategoryCard icon="ping-pong" label="Tênis" />,
             <CategoryCard icon="volleyball" label="Voleibol" />,
-            <CategoryCard icon="volleyball" label="Voleibol" />,
-            <CategoryCard icon="volleyball" label="Voleibol" />,
-            <CategoryCard icon="volleyball" label="Voleibol" />,
-            <CategoryCard icon="volleyball" label="Voleibol" />,
-            <CategoryCard icon="volleyball" label="Voleibol" />,
-            <CategoryCard icon="volleyball" label="Voleibol" />,
-            <CategoryCard icon="volleyball" label="Voleibol" />,
+            <CategoryCard icon="boxe" label="Boxe" />,
+            <CategoryCard icon="golf" label="golf" />,
+            <CategoryCard icon="mma" label="MMA" />,
+            <CategoryCard icon="snooker" label="snooker" />,
           ]}
         ></Carousel>
       </main>

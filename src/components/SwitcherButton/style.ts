@@ -11,8 +11,8 @@ export const switcherContainer = css({
   borderRadius: "md",
   fontSize: "sm",
   flexShrink: 0,
-  border: 1,
-  gap: 4
+  borderWidth: 1,
+  gap: 4,
 });
 
 export const activeButtonProperties: Styles = {
@@ -26,6 +26,9 @@ export const activeButtonProperties: Styles = {
     maxWidth: '100px',
     animation: `max-width`
   },
+  '& svg': {
+    fill: 'white',
+  }
 }
 export const activeButton = css(activeButtonProperties)
 
@@ -43,25 +46,7 @@ export const buttonStyle = css({
     ...activeButtonProperties,
     '& span': {
       maxWidth: '100px',
-      animation: `max-width`
+      animation: `max-width`,
     },
-  },
-});
-
-
-export const inactiveButtonStyle = css({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  paddingY: 2,
-  paddingX: 4,
-  borderRadius: "3xl",
-  background: "transparent",
-  color: "#b3b3b3",
-  fontSize: "md",
-  cursor: "pointer",
-  transition: "color 0.3s ease",
-  "&:hover": {
-    color: "white",
   },
 });

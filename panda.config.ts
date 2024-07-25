@@ -82,5 +82,18 @@ export default defineConfig({
   },
   presets: ['@pandacss/preset-base', '@pandacss/preset-panda'],
   outdir: "styled-system",
-  jsxFramework: 'react'
+  jsxFramework: 'react',
+  globalCss: {
+    extend: {
+      "*": {
+        boxSizing: 'border-box',
+        borderColor: 'var(--colors-border)',
+        borderStyle: 'solid',
+        scrollbarColor: 'var(--colors-neutral-300) transparent',
+        scrollbarWidth: 'thin',
+        webkitOverflowScrolling: 'touch'
+        
+      }
+    }
+  }
 });

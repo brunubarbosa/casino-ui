@@ -39,8 +39,11 @@ export const buttonWrapper = cva({
         }
       },
       outline: {
-        border: '1px',
-        padding: '2'
+        borderWidth: 1,
+        padding: '2',
+        _hover: {
+          opacity: '0.7'
+        }
       },
       social: {
         textWrap: 'wrap',

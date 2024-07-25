@@ -51,10 +51,7 @@ export const FinancialCard: React.FC<FinancialCardProps> = ({
             </div>
           </div>
 
-          <Badge type="success">
-            <Icon name="rise" width={10} height={10} />
-            <span>{percentageChange}%</span>
-          </Badge>
+          <Badge type="error" content={`${percentageChange}%`} icon="rise" />
         </div>
         <div className={financialCardBody}>
           <div>$ {price}</div>

@@ -8,6 +8,6 @@ export const mainWrapper = css({
   gap: 10,
   maxWidth: 'full',
   padding: 5,
-  paddingBottom: 24
+  paddingBottom: 24,
 
 })
