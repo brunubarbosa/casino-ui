@@ -113,7 +113,7 @@ export const Footer = ({}: FooterProps) => {
             iconSize="10"
           >
             <span className={socialButtonText}>
-              Join <strong>Discord's largest community </strong>
+              Join <strong>Discord&apos;s largest community </strong>
               of players now!
             </span>
           </Button>
